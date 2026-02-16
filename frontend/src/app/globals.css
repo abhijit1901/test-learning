@@ -1,0 +1,101 @@
+:root {
+  --bg: radial-gradient(circle at 10% 10%, #133b5c 0%, #0b1026 40%, #05070f 100%);
+  --panel: rgba(255, 255, 255, 0.08);
+  --panel-strong: rgba(255, 255, 255, 0.14);
+  --text: #f6f7fb;
+  --muted: #c7d0ea;
+  --accent: #58f0a7;
+  --danger: #ff6b6b;
+  --border: rgba(255, 255, 255, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  color: var(--text);
+  background: var(--bg);
+  font-family: var(--font-space), sans-serif;
+}
+
+main {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 32px 16px 64px;
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+}
+
+button,
+input {
+  font: inherit;
+}
+
+input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--text);
+  padding: 10px 12px;
+}
+
+input:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+button {
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: transform 120ms ease, opacity 120ms ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #072219;
+  font-weight: 700;
+}
+
+.btn-ghost {
+  background: transparent;
+  border-color: var(--border);
+  color: var(--text);
+}
+
+.btn-danger {
+  background: var(--danger);
+  color: #2d0909;
+  font-weight: 700;
+}
+
+.mono {
+  font-family: var(--font-mono), monospace;
+}
+
+@media (max-width: 720px) {
+  main {
+    padding-top: 22px;
+  }
+}

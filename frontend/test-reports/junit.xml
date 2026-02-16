@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="10" failures="0" errors="0" time="5.244">
+  <testsuite name="UsersPage integration" errors="0" failures="0" skipped="0" timestamp="2026-02-16T06:07:05" time="3.368" tests="3">
+    <testcase classname="UsersPage integration loads existing users" name="UsersPage integration loads existing users" time="0.174">
+    </testcase>
+    <testcase classname="UsersPage integration creates a user" name="UsersPage integration creates a user" time="0.753">
+    </testcase>
+    <testcase classname="UsersPage integration updates and deletes a user" name="UsersPage integration updates and deletes a user" time="0.467">
+    </testcase>
+  </testsuite>
+  <testsuite name="users api client" errors="0" failures="0" skipped="0" timestamp="2026-02-16T06:07:08" time="0.312" tests="4">
+    <testcase classname="users api client lists users" name="users api client lists users" time="0.006">
+    </testcase>
+    <testcase classname="users api client creates user" name="users api client creates user" time="0.004">
+    </testcase>
+    <testcase classname="users api client updates and deletes user" name="users api client updates and deletes user" time="0.01">
+    </testcase>
+    <testcase classname="users api client throws backend error message" name="users api client throws backend error message" time="0.007">
+    </testcase>
+  </testsuite>
+  <testsuite name="user schemas" errors="0" failures="0" skipped="0" timestamp="2026-02-16T06:07:08" time="0.403" tests="3">
+    <testcase classname="user schemas validates a user payload" name="user schemas validates a user payload" time="0.001">
+    </testcase>
+    <testcase classname="user schemas rejects invalid create payload" name="user schemas rejects invalid create payload" time="0.005">
+    </testcase>
+    <testcase classname="user schemas rejects short update name" name="user schemas rejects short update name" time="0.005">
+    </testcase>
+  </testsuite>
+</testsuites>

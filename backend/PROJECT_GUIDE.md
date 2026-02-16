@@ -233,3 +233,61 @@ Run linter:
 npm run lint
 ```
 
+---
+
+# Frontend: User Management UI
+
+## 1. Big Picture (What is this project?)
+This project is a web front-end for the User Management API. It allows users to see, create, update, and delete users through a graphical interface in their browser.
+
+It provides a user-friendly way to interact with the backend API without needing to use command-line tools.
+
+## 2. Tech Stack (in simple words)
+- `Next.js`: A React framework for building user interfaces. It handles routing and server-side rendering.
+- `React`: A library for building user interface components.
+- `zod`: for data validation.
+- `jest`: The test runner for running automated tests.
+- `React Testing Library`: A library for testing React components in a way that resembles how a user interacts with them.
+- `@testing-library/user-event`: Simulates user actions like clicking and typing in tests.
+- `msw` (Mock Service Worker): Intercepts network requests during tests to provide mock API responses. This allows the frontend to be tested independently of the backend.
+- `jest-html-reporters`: Generates an HTML report of test results.
+
+## 3. Project Structure (what each folder does)
+- `frontend/src/app/page.tsx`: The main entry point of the application UI.
+- `frontend/src/features/users/users-page.tsx`: The main component that renders the user list and form.
+- `frontend/src/lib/api/users.ts`: Functions for making API calls to the backend.
+- `frontend/src/test/msw/`: Contains the MSW server setup for mocking API calls in tests.
+- `frontend/src/features/users/__tests__/`: Contains integration tests for the user feature.
+- `frontend/jest.config.js`: Configuration for the Jest test runner.
+- `frontend/eslint.config.mjs`: Configuration for the ESLint linter.
+
+## 4. Testing Workflow
+The frontend has a robust testing setup to ensure reliability.
+
+### Component Integration Tests
+- Tests are written in `*.test.tsx` files inside `__tests__` directories.
+- They use `React Testing Library` to render components and simulate user interactions.
+- The goal is to test the component from the user's perspective.
+
+### API Mocking
+- `msw` is used to mock the backend API. This means tests run without needing the backend server to be running.
+- The mock server is defined in `frontend/src/test/msw/` and is automatically started for all tests via `frontend/jest.setup.ts`.
+
+### Test Reports
+- After running the tests, a detailed HTML report is generated in `frontend/test-reports/`.
+- This was added to provide a clear view of test results, similar to the backend.
+
+Run tests:
+```bash
+npm test
+```
+
+## 5. Linting
+- `ESLint` is used to enforce code quality and consistency.
+- The configuration in `eslint.config.mjs` has been updated to ignore the `.next/` build directory, fixing errors related to generated code.
+
+Run linter:
+```bash
+npm run lint
+```
+
