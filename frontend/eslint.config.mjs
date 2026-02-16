@@ -11,6 +11,15 @@ const compat = new FlatCompat({
 });
 
 const config = [
+  {
+    ignores: [
+      ".next/",
+      "coverage/",
+      "test-reports/",
+      "jest.config.js",
+      "jest.setup.ts"
+    ]
+  },
   ...compat.config({
     extends: ["next/core-web-vitals"]
   }),
@@ -18,9 +27,6 @@ const config = [
     rules: {
       "react/jsx-no-useless-fragment": "warn"
     }
-  },
-  {
-    ignores: [".next/"]
   }
 ];
 
