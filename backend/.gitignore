@@ -1,0 +1,20 @@
+# Dependencies - Never commit these
+node_modules/
+
+# Environment Variables - Security Risk
+.env
+.env.test
+
+# Build and IDE files
+dist/
+.vscode/
+.idea/
+
+# Testing & Reports
+coverage/
+test-reports/
+npm-debug.log*
+
+# OS specific files
+.DS_Store
+Thumbs.db
