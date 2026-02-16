@@ -1,7 +1,4 @@
 # Frontend Guide (Next.js)
-
-This frontend is designed to mirror your backend quality style: layered architecture, automated tests, and predictable workflows.
-
 ## 1. What you get
 - Next.js App Router frontend in `backend/frontend`
 - Real CRUD UI for users
